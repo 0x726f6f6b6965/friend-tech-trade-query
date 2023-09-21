@@ -1,2 +1,2 @@
-# friend.tech-tradeRecord-serverless
+# friend-tech-trade-query
 A repository built on AWS for querying friend.tech transaction records
