@@ -4,7 +4,7 @@ A repository built on AWS for querying friend.tech transaction records
 
 - Request 
   - ```cmd
-    curl --location 'https://kpdbcbje55.execute-api.us-east-1.amazonaws.com/tradeRecord' \
+    curl --location 'https://55x9o6c2t2.execute-api.ap-northeast-1.amazonaws.com/Dev/query' \
         --header 'Content-Type: application/json' \
         --data '{
             "tx_hash": "0xc3100e7e0bb4f89f91d2d9da6636689601f4447423562e1910e8668a5b78a987"

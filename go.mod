@@ -4,6 +4,7 @@ go 1.21.1
 
 require (
 	github.com/aws/aws-lambda-go v1.41.0
+	github.com/aws/aws-sdk-go v1.45.18
 	github.com/ethereum/go-ethereum v1.13.1
 )
 
@@ -23,6 +24,7 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/holiman/uint256 v1.2.3 // indirect
+	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/klauspost/compress v1.16.3 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/mattn/go-runewidth v0.0.14 // indirect

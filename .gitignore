@@ -1,9 +1,7 @@
-internal
-cmd
 bin
-proto
-services
-buf.gen.yaml
+.terraform
+.terraform.lock.hcl
 helper/abi_test.go
+infra/terraform.tfstate.backup
+infra/terraform.tfstate
 query/main_test.go
-.serverless
