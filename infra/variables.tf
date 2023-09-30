@@ -33,10 +33,10 @@ variable "rest_api_name" {
     type        = string
 }
 
-variable "iam_policy_arn" {
-    description = "IAM Policy to be attached to role"
-    type        = list(string)
-    default = [
-        "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-    ]
-}
+# variable "iam_policy_arn" {
+#     description = "IAM Policy to be attached to role"
+#     type        = list(string)
+#     default = [
+#         "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+#     ]
+# }
