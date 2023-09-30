@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/0x726f6f6b6965/friend-tech-trade-query/helper"
+	"github.com/0x726f6f6b6965/friend-tech-trade-query/api/internal/helper"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws"
@@ -27,7 +27,7 @@ type TradeRecordResponse struct {
 	TxHash            string `json:"-" dynamodbav:"tx_hash"`
 	Trader            string `json:"trader,omitempty" abi:"trader" dynamodbav:"trader"`
 	Subject           string `json:"subject,omitempty" abi:"subject" dynamodbav:"subject"`
-	IsBuy             bool   `json:"is_buy,omitempty" abi:"isBuy" dynamodbav:"isBuy"`
+	IsBuy             bool   `json:"is_buy" abi:"isBuy" dynamodbav:"isBuy"`
 	ShareAmount       string `json:"share_amount,omitempty" abi:"shareAmount" dynamodbav:"shareAmount"`
 	EthAmount         string `json:"eth_amount,omitempty" abi:"ethAmount" dynamodbav:"ethAmount"`
 	ProtocolEthAmount string `json:"protocol_eth_amount,omitempty" abi:"protocolEthAmount" dynamodbav:"protocolEthAmount"`

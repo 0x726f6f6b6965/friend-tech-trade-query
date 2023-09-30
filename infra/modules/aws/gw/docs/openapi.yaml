@@ -1,0 +1,74 @@
+openapi: 3.0.3
+info:
+  title: Friend.Tech - OpenAPI 3.0
+  description: |-
+    This is a simple api of friend.tech on the OpenAPI 3.0 specification.
+  version: 0.0.1
+paths:
+  /query:
+    post:
+      summary: Query the trade record
+      description: Query the trade record by transaction
+      operationId: queryTradeRecord
+      requestBody:
+        description: Query the trade record by transaction
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Query'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Query'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Query'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TradeReord'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/TradeReord'
+        '400':
+          description: Invalid transaction
+        '404':
+          description: Receipt of transaction not found
+        '405':
+          description: Validation exception
+      security:
+        - petstore_auth:
+            - write:pets
+            - read:pets
+components:
+  schemas:
+    Query:
+      type: object
+      properties:
+        tx_hash:
+          type: string
+          example: "0x0fc0dd709e3eb655bece48426b6adf3bc8568dd9208ac215fef7cba9bb6d0f5f"
+      xml:
+        name: query
+    TradeRecord:
+      type: object
+      properties:
+        trader:
+          type: string
+        subject:
+          type: string
+        is_buy:
+          type: boolean
+        share_amount:
+          type: string
+        eth_amount:
+          type: string
+        protocol_eth_amount:
+          type: string
+        subject_eth_amount:
+          type: string
+        supply:
+          type: string
